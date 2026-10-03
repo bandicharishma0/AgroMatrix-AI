@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Credit Score Result</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        🌾 AgriCredit AI
+    </div>
+
+    <a href="/dashboard">
+        Dashboard
+    </a>
+
+</nav>
+
+
+<div class="result-container">
+
+    <h1>AI Credit Assessment</h1>
+
+
+    <div class="score-card">
+
+        <h2>Credit Score</h2>
+
+        <div class="score">
+            {{ score }}
+        </div>
+
+        <h3>
+            {{ risk }}
+        </h3>
+
+    </div>
+
+
+    <div class="status">
+
+        <h2>{{ status }}</h2>
+
+    </div>
+
+
+    <div class="risk-card">
+
+        <h2>Risk Factors</h2>
+
+        <ul>
+
+            {% for factor in factors %}
+
+            <li>
+                {{ factor }}
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+
+    <a
+        class="btn"
+        href="/dashboard"
+    >
+        New Assessment
+    </a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        🌾 AgriCredit AI
+    </div>
+
+    <div>
+
+        <span>Welcome, {{ name }}</span>
+
+        <a href="/logout">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="dashboard">
+
+    <h1>Farmer Credit Assessment</h1>
+
+    <p>
+        Enter farmer details to calculate the AI-based
+        agricultural loan credit score.
+    </p>
+
+
+    <form
+        action="/predict"
+        method="POST"
+        class="loan-form"
+    >
+
+        <label>Land Size (Acres)</label>
+
+        <input
+            type="number"
+            name="land_size"
+            min="1"
+            required
+        >
+
+
+        <label>Annual Income (₹)</label>
+
+        <input
+            type="number"
+            name="annual_income"
+            required
+        >
+
+
+        <label>Existing Loan Amount (₹)</label>
+
+        <input
+            type="number"
+            name="existing_loan"
+            required
+        >
+
+
+        <label>
+            Repayment History (0 - 10)
+        </label>
+
+        <input
+            type="number"
+            name="repayment_history"
+            min="0"
+            max="10"
+            required
+        >
+
+
+        <label>
+            Crop Success Rate (0 - 10)
+        </label>
+
+        <input
+            type="number"
+            name="crop_success"
+            min="0"
+            max="10"
+            required
+        >
+
+
+        <label>
+            Weather Risk (0 - 10)
+        </label>
+
+        <input
+            type="number"
+            name="weather_risk"
+            min="0"
+            max="10"
+            required
+        >
+
+
+        <button type="submit">
+            Calculate Credit Score
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
