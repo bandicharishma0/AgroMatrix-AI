@@ -1,4 +1,5 @@
-# AI-Based Agricultural Loan Credit Scoring System
+# ArgoMatrix-AI
+# Based Agricultural Loan Credit Scoring System
 
 ## Project Description
 
